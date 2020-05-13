@@ -1,4 +1,5 @@
 import React from 'react';
+import UserInput from './User/UserInput';
 
 const userOutput = (props) => {
   return (
