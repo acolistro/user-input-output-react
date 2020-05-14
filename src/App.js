@@ -5,15 +5,24 @@ import UserOutput from './UserOutput/UserOutput';
 
 
 class App extends Component {
+  state = {
+    username: 'AnzaBonanza'
+  }
+
+  handleChangeUsername = (event) => {
+    this.setState({
+      username: event.target.value 
+    })
+  }
 
   render() {
     return (
       <div className="App">
         <UserInput />
-        <UserOutput />
-        <UserOutput />
-        <UserOutput />
-        
+        <UserOutput userName={this.state.username}/>
+        <UserOutput userName="Doogs"/>
+        <UserOutput userName="Lester"/>
+
         {/* <h1>UserInput/UserOutput!</h1>
         <button onClick={() => this.handleChangeUsername('Anonymous User')}>Hide Usernames</button>
         
@@ -43,7 +52,7 @@ export default App;
 <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
 </ol> */}
 
-class App extends Component {
+// class App extends Component {
   //   state = {
   //     userOutputs: [
   //       { 
@@ -84,4 +93,4 @@ class App extends Component {
   
   //     })
   //   }
-  
+  //
